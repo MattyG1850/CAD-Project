@@ -21,9 +21,23 @@ python -m pip install Pint
 
 python -m pip install metpy
 
-pip install cartopy
+pip install geos
+
+pip install shapely
+
+pip install pyshp
+
+pip install pyproj
+
+pip install cython
+
+pip install cartopy ###having trouble with cartopy###
 
 pip install siphon
 
 pip install netCDF4
+
+pip install datetime
+
+pip install thredds
 """
