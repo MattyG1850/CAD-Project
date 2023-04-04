@@ -1,5 +1,5 @@
 """
-This is the master plugins/ modules file
+This is the master plugins/ modules file for windows
 Copy/Paste these lines separately into the terminal and run
 """
 """
