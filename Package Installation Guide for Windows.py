@@ -40,4 +40,6 @@ pip install netCDF4
 pip install datetime
 
 pip install thredds
+
+conda install -c conda-forge cfgrib
 """
