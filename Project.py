@@ -16,6 +16,8 @@ import datetime
 
 rtma_catalog = TDSCatalog('https://thredds-jumbo.unidata.ucar.edu/thredds/catalog/grib/NCEP/RTMA/CONUS_2p5km/catalog.xml')
 rtma_data = rtma_catalog.datasets['Latest Collection for Real Time Mesoscale Analysis 2.5 km'].remote_access(use_xarray=True)
+#Note: changing the two lines above will make it possible to use data other than the very latest RTMA output (archives?)
+
 rtma_data = rtma_data.metpy.parse_cf()
 #line below adds coordinates in lats and lons (were previously in x and y only)
 rtma_data = rtma_data.metpy.assign_latitude_longitude(force=False)
@@ -144,7 +146,7 @@ def wedge_front_locator():
 wedge_front_locator()
 
 
-#Plotting code below:
+#Plotting code below:       *note: when using Jupyter this runs automatically, but print statements may be needed to show the plot on other platforms
 
 print("Below is an image with temperature shaded in, and equivalent potential temperature (theta-e) countoured")
 plot_proj = theta_e.metpy.cartopy_crs
